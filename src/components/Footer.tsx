@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer id="contact" className="bg-bang-blue text-white">
       <div className="container max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 p-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-12">
           <div>
             <div className="text-2xl font-bold mb-6">
               Bang<span className="text-bang-orange">.</span>
@@ -35,6 +35,11 @@ const Footer = () => {
               <li><a href="#testimonials" className="text-white/70 hover:text-bang-orange transition-colors">Témoignages</a></li>
               <li><a href="#faq" className="text-white/70 hover:text-bang-orange transition-colors">FAQ</a></li>
             </ul>
+            
+            <div className="mt-8 p-4 bg-white/10 rounded-lg">
+              <p className="text-white font-medium mb-2">Garantie <span className="text-[#ea384c] font-bold">100% SATISFAIT OU REMBOURSÉ</span></p>
+              <p className="text-white/70 text-sm">Testez notre solution sans risque. Si vous n'êtes pas satisfait, nous vous remboursons intégralement.</p>
+            </div>
           </div>
           
           <div>
@@ -53,24 +58,6 @@ const Footer = () => {
                 <span className="text-white/70">58 rue de la République<br />75011 Paris, France</span>
               </li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Newsletter</h3>
-            <p className="text-white/70 mb-4">Inscrivez-vous pour recevoir nos dernières actualités et conseils pour gérer votre e-réputation.</p>
-            <form className="space-y-3">
-              <input 
-                type="email" 
-                placeholder="Votre email" 
-                className="w-full px-4 py-2.5 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-bang-orange text-white placeholder:text-white/50"
-              />
-              <button 
-                type="submit"
-                className="w-full py-2.5 bg-bang-orange hover:bg-opacity-90 text-white rounded-lg font-medium transition-colors"
-              >
-                S'inscrire
-              </button>
-            </form>
           </div>
         </div>
         

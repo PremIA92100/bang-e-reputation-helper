@@ -7,7 +7,7 @@ import { Slider } from '@/components/ui/slider';
 
 const TimeChart = () => {
   // État pour le temps consacré sans Bang (en heures par mois)
-  const [timeWithoutBang, setTimeWithoutBang] = useState<number>(10);
+  const [timeWithoutBang, setTimeWithoutBang] = useState<number>(5);
   
   // Calcul du temps avec Bang (90% de réduction)
   const timeWithBang = parseFloat((timeWithoutBang * 0.1).toFixed(1));
@@ -74,6 +74,11 @@ const TimeChart = () => {
                 </div>
               </div>
             </div>
+            
+            <div className="mt-8 p-4 bg-red-50 border border-red-100 rounded-lg flex items-center">
+              <div className="text-red-600 font-bold mr-2">★</div>
+              <p className="text-bang-blue font-medium">100% <span className="text-[#ea384c] font-bold">SATISFAIT OU REMBOURSÉ</span> - Aucun engagement</p>
+            </div>
           </div>
           
           <div className="bg-white rounded-2xl shadow-md p-6">
@@ -90,7 +95,7 @@ const TimeChart = () => {
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={data} layout="vertical" margin={{ left: 20, right: 20, top: 20, bottom: 20 }}>
                     <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
-                    <XAxis type="number" domain={[0, Math.max(20, timeWithoutBang * 1.2)]} />
+                    <XAxis type="number" domain={[0, 15]} />
                     <YAxis type="category" dataKey="name" width={100} />
                     <ChartTooltip
                       content={({ active, payload }) => {
@@ -129,17 +134,17 @@ const TimeChart = () => {
               </div>
               
               <Slider
-                defaultValue={[10]}
-                min={5}
-                max={40}
+                defaultValue={[5]}
+                min={1}
+                max={15}
                 step={1}
                 onValueChange={(value) => setTimeWithoutBang(value[0])}
                 className="cursor-pointer"
               />
               
               <div className="flex justify-between text-sm text-gray-500">
-                <span>5h</span>
-                <span>40h</span>
+                <span>1h</span>
+                <span>15h</span>
               </div>
               
               <div className="bg-green-50 rounded-lg p-3 border border-green-100 mt-4">
