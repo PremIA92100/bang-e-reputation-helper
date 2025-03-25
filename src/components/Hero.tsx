@@ -34,6 +34,17 @@ const Hero = () => {
               Solution complète de gestion d'avis en ligne, 2x plus performante et 4x moins chère que la concurrence
             </p>
             
+            <div className="flex items-center gap-2 bg-blue-50 rounded-lg p-3 border border-blue-100 opacity-0 animate-fade-in" style={{ animationDelay: '400ms' }}>
+              <div className="bg-blue-100 rounded-full p-2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#3B82F6" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <p className="text-sm text-bang-blue">
+                <span className="font-semibold">Produit de l'agence Prem'IA</span> - Gestion des avis en autonomie selon vos besoins
+              </p>
+            </div>
+            
             <div 
               className="flex flex-col sm:flex-row gap-4 pt-4 opacity-0 animate-fade-in"
               style={{ animationDelay: '500ms' }}
@@ -50,6 +61,17 @@ const Hero = () => {
               >
                 Découvrir nos offres
               </a>
+            </div>
+            
+            <div className="flex items-center gap-2 bg-green-50 rounded-lg p-3 border border-green-100 opacity-0 animate-fade-in" style={{ animationDelay: '450ms' }}>
+              <div className="bg-green-100 rounded-full p-2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#22C55E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#22C55E"/>
+                </svg>
+              </div>
+              <p className="text-sm text-bang-blue">
+                <span className="font-semibold">Disponibilité WhatsApp 7/7</span> - Pour modifier le ton des réponses à tout moment
+              </p>
             </div>
             
             <div 

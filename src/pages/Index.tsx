@@ -6,6 +6,7 @@ import Problem from '@/components/Problem';
 import Solution from '@/components/Solution';
 import Industries from '@/components/Industries';
 import Importance from '@/components/Importance';
+import TimeChart from '@/components/TimeChart';
 import Pricing from '@/components/Pricing';
 import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
@@ -39,6 +40,7 @@ const Index = () => {
       <Problem />
       <Solution />
       <Industries />
+      <TimeChart />
       <Importance />
       <Pricing />
       <Testimonials />
