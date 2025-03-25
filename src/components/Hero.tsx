@@ -1,6 +1,18 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Utensils, Scissors, Tooth, XRay, Hospital, Car, Store, HeartPulse } from 'lucide-react';
+
+const businesses = [
+  { icon: <Utensils className="h-6 w-6" />, name: "Restaurants" },
+  { icon: <Scissors className="h-6 w-6" />, name: "Coiffeurs" },
+  { icon: <Tooth className="h-6 w-6" />, name: "Dentistes" },
+  { icon: <XRay className="h-6 w-6" />, name: "Radiologie" },
+  { icon: <Hospital className="h-6 w-6" />, name: "Cliniques" },
+  { icon: <Car className="h-6 w-6" />, name: "Garages Auto" },
+  { icon: <Store className="h-6 w-6" />, name: "Commerces" },
+  { icon: <HeartPulse className="h-6 w-6" />, name: "Bien-être" }
+];
 
 const Hero = () => {
   return (
@@ -58,13 +70,18 @@ const Hero = () => {
           <div 
             className="relative opacity-0 animate-fade-in-up animation-delay-300"
           >
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-bang-orange/20 to-bang-blue/20 rounded-2xl blur-xl animate-pulse animate-ping-slow"></div>
-            <div className="relative bg-white p-3 rounded-2xl shadow-lg animate-float">
-              <img 
-                src="https://placehold.co/1200x800/F8FAFC/1E293B/png?text=Bang+Dashboard" 
-                alt="Dashboard Bang montrant les statistiques d'avis" 
-                className="w-full h-auto rounded-xl"
-              />
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {businesses.map((business, index) => (
+                <div 
+                  key={index}
+                  className="bg-white p-4 rounded-xl shadow-sm border border-bang-gray hover:border-bang-orange transition-all flex flex-col items-center text-center gap-2"
+                >
+                  <div className="bg-bang-lightgray rounded-full p-3 text-bang-orange">
+                    {business.icon}
+                  </div>
+                  <p className="font-medium text-bang-blue text-sm">{business.name}</p>
+                </div>
+              ))}
             </div>
             <div className="absolute -bottom-6 -right-6 bg-white shadow-lg p-4 rounded-xl">
               <div className="flex items-center space-x-3">
