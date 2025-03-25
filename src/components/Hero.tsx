@@ -1,17 +1,17 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Utensils, Scissors, Tooth, XRay, Hospital, Car, Store, HeartPulse } from 'lucide-react';
+import { Utensils, Scissors, Stethoscope, ScanLine, Building2, Car, Store, Heart } from 'lucide-react';
 
 const businesses = [
   { icon: <Utensils className="h-6 w-6" />, name: "Restaurants" },
   { icon: <Scissors className="h-6 w-6" />, name: "Coiffeurs" },
-  { icon: <Tooth className="h-6 w-6" />, name: "Dentistes" },
-  { icon: <XRay className="h-6 w-6" />, name: "Radiologie" },
-  { icon: <Hospital className="h-6 w-6" />, name: "Cliniques" },
+  { icon: <Stethoscope className="h-6 w-6" />, name: "Dentistes" },
+  { icon: <ScanLine className="h-6 w-6" />, name: "Radiologie" },
+  { icon: <Building2 className="h-6 w-6" />, name: "Cliniques" },
   { icon: <Car className="h-6 w-6" />, name: "Garages Auto" },
   { icon: <Store className="h-6 w-6" />, name: "Commerces" },
-  { icon: <HeartPulse className="h-6 w-6" />, name: "Bien-être" }
+  { icon: <Heart className="h-6 w-6" />, name: "Bien-être" }
 ];
 
 const Hero = () => {
