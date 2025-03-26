@@ -11,7 +11,7 @@ const TimeChart = () => {
   const [timeWithoutBang, setTimeWithoutBang] = useState<number>(10);
   const isMobile = useIsMobile();
   
-  // Calcul du temps avec Bang (5% de réduction)
+  // Calcul du temps avec Bang (95% de réduction)
   const timeWithBang = parseFloat((timeWithoutBang * 0.05).toFixed(1));
   
   // Données pour le graphique, mises à jour en fonction du curseur
@@ -83,7 +83,7 @@ const TimeChart = () => {
             </div>
           </div>
           
-          <div className="bg-white rounded-2xl shadow-md p-6">
+          <div className="bg-white rounded-2xl shadow-md p-6 overflow-hidden">
             <h3 className="text-xl font-semibold text-center mb-6">
               Temps consacré à la gestion des avis
               <br />(heures/mois)

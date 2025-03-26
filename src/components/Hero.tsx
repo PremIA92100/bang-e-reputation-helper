@@ -1,16 +1,16 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Utensils, Scissors, Stethoscope, ScanLine, Building2, Car, Store, Heart } from 'lucide-react';
+import { Utensils, Scissors, Building2, Car, Store, Heart, Hotel, ShoppingBag } from 'lucide-react';
 
 const businesses = [
   { icon: <Utensils className="h-6 w-6" />, name: "Restaurants" },
   { icon: <Scissors className="h-6 w-6" />, name: "Coiffeurs" },
-  { icon: <Stethoscope className="h-6 w-6" />, name: "Dentistes" },
-  { icon: <ScanLine className="h-6 w-6" />, name: "Radiologie" },
-  { icon: <Building2 className="h-6 w-6" />, name: "Cliniques" },
+  { icon: <Hotel className="h-6 w-6" />, name: "Hôtels" },
   { icon: <Car className="h-6 w-6" />, name: "Garages Auto" },
+  { icon: <Building2 className="h-6 w-6" />, name: "Cliniques" },
   { icon: <Store className="h-6 w-6" />, name: "Commerces" },
+  { icon: <ShoppingBag className="h-6 w-6" />, name: "Boutiques" },
   { icon: <Heart className="h-6 w-6" />, name: "Bien-être" }
 ];
 
@@ -86,7 +86,7 @@ const Hero = () => {
                 <div className="w-10 h-10 rounded-full bg-bang-lightgray flex items-center justify-center text-xs font-bold">TL</div>
               </div>
               <p className="text-sm text-bang-lightblue">
-                <span className="font-semibold">500+</span> commerçants satisfaits
+                <span className="font-semibold">50+</span> commerçants satisfaits
               </p>
             </div>
           </div>
@@ -107,7 +107,7 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-white shadow-lg p-4 rounded-xl">
+            <div className="absolute -bottom-6 right-12 bg-white shadow-lg p-4 rounded-xl">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
