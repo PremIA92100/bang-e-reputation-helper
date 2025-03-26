@@ -124,7 +124,7 @@ const Testimonials = () => {
           <div className="inline-flex items-center px-6 py-3 bg-bang-blue/5 rounded-full">
             <span className="text-bang-blue font-medium">Partenaire Google certifié</span>
             <span className="mx-3 text-bang-lightblue">•</span>
-            <span className="text-bang-blue font-medium">500+ commerces accompagnés</span>
+            <span className="text-bang-blue font-medium">50+ commerces accompagnés</span>
           </div>
         </div>
       </div>

@@ -6,13 +6,13 @@ import { cn } from '@/lib/utils';
 const pricingPlans = [
   {
     name: "Essentiel",
-    price: "19,99€",
+    price: "9,99€",
     billing: "HT / mois",
     description: "Idéal pour les petits commerces qui débutent dans la gestion des avis.",
     features: [
       "Surveillance de vos avis Google",
       "Notifications par email",
-      "30 réponses personnalisées / mois",
+      "15 réponses personnalisées / mois",
       "Rapport mensuel basique",
       "Support par email"
     ],
@@ -39,7 +39,7 @@ const pricingPlans = [
       "Rapport mensuel détaillé",
       "Analyse sémantique des avis",
       "Marketing multi-établissements",
-      "Support par email et téléphone"
+      "Support par email prioritaire"
     ],
     notIncluded: [
       "Intégration des avis sur votre site",
@@ -56,7 +56,7 @@ const pricingPlans = [
     features: [
       "Surveillance de vos avis Google",
       "Notifications en temps réel",
-      "Réponses illimitées personnalisées",
+      "300 réponses personnalisées / mois",
       "Réponses optimisées pour le SEO",
       "Rapport mensuel avancé",
       "Analyse sémantique des avis",
