@@ -47,15 +47,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-bang-orange" />
-                <span className="text-white/70">01 23 45 67 89</span>
+                <span className="text-white/70">06 59 19 40 54</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-bang-orange" />
-                <span className="text-white/70">contact@bang-ereputation.com</span>
+                <span className="text-white/70">contact@agence-premia.fr</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-bang-orange mt-1" />
-                <span className="text-white/70">58 rue de la République<br />75011 Paris, France</span>
+                <span className="text-white/70">34 Avenue des Champs-Elysées<br />75008 Paris, France</span>
               </li>
             </ul>
           </div>

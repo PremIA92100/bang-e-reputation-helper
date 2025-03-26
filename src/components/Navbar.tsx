@@ -58,7 +58,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="https://trends.google.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 bg-bang-orange hover:bg-opacity-90 text-white rounded-full font-medium transition-all"
           >
             Nous contacter
@@ -90,7 +92,9 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="#contact"
+              href="https://trends.google.fr/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 mt-4 bg-bang-orange hover:bg-opacity-90 text-white rounded-full font-medium transition-all"
               onClick={() => setIsMenuOpen(false)}
             >
