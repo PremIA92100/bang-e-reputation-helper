@@ -11,7 +11,7 @@ const TimeChart = () => {
   const [timeWithoutBang, setTimeWithoutBang] = useState<number>(10);
   const isMobile = useIsMobile();
   
-  // Calcul du temps avec Bang (95% de réduction)
+  // Calcul du temps avec Bang (5% de réduction)
   const timeWithBang = parseFloat((timeWithoutBang * 0.05).toFixed(1));
   
   // Données pour le graphique, mises à jour en fonction du curseur
@@ -89,19 +89,19 @@ const TimeChart = () => {
               <br />(heures/mois)
             </h3>
             
-            <div className="h-[280px] mb-6">
+            <div className="h-64 w-full mb-6">
               <ChartContainer
                 config={{
                   "Sans Bang": { color: "#94a3b8" },
                   "Avec Bang": { color: "#f97316" }
                 }}
-                className="h-full"
+                className="h-full w-full"
               >
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart 
                     data={data} 
                     layout="vertical" 
-                    margin={{ left: isMobile ? 60 : 80, right: 20, top: 20, bottom: 20 }}
+                    margin={{ left: isMobile ? 40 : 60, right: 10, top: 10, bottom: 10 }}
                     barGap={4}
                     maxBarSize={40}
                   >
@@ -109,20 +109,22 @@ const TimeChart = () => {
                     <XAxis 
                       type="number" 
                       domain={[0, 15]} 
-                      ticks={[0, 4, 8, 12, 15]} 
+                      ticks={[0, 5, 10, 15]} 
+                      tick={{ fontSize: 12 }}
                     />
                     <YAxis 
                       type="category" 
                       dataKey="name" 
-                      width={80} 
+                      width={isMobile ? 65 : 80}
                       tickLine={false}
                       axisLine={false}
+                      tick={{ fontSize: 12 }}
                     />
                     <ChartTooltip
                       content={({ active, payload }) => {
                         if (active && payload && payload.length) {
                           return (
-                            <div className="bg-white p-4 border rounded-lg shadow-md">
+                            <div className="bg-white p-3 border rounded-lg shadow-md">
                               <p className="font-medium">{payload[0].payload.name}</p>
                               <p className="text-sm">
                                 <span className="font-semibold">{payload[0].value}</span> heures/mois
@@ -148,23 +150,25 @@ const TimeChart = () => {
               </ChartContainer>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-4 mt-2">
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-700">Ajustez le temps consacré sans Bang:</span>
-                <span className="text-xl font-semibold text-bang-orange">{timeWithoutBang} heures</span>
+                <span className="text-xl font-semibold text-bang-orange">{timeWithoutBang} {timeWithoutBang === 1 ? 'heure' : 'heures'}</span>
               </div>
               
-              <Slider
-                value={[timeWithoutBang]}
-                min={1}
-                max={15}
-                step={1}
-                onValueChange={(value) => setTimeWithoutBang(value[0])}
-                className="cursor-pointer"
-              />
+              <div className="px-1">
+                <Slider
+                  value={[timeWithoutBang]}
+                  min={0.5}
+                  max={15}
+                  step={0.5}
+                  onValueChange={(value) => setTimeWithoutBang(value[0])}
+                  className="cursor-pointer"
+                />
+              </div>
               
-              <div className="flex justify-between text-sm text-gray-500 mt-1">
-                <span>1h</span>
+              <div className="flex justify-between text-xs text-gray-500 px-0.5">
+                <span>30min</span>
                 <span>15h</span>
               </div>
               
@@ -175,7 +179,7 @@ const TimeChart = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-bang-blue">
-                      Avec Bang: seulement <span className="text-green-600 font-semibold text-lg">{timeWithBang} heures/mois</span>
+                      Avec Bang: seulement <span className="text-green-600 font-semibold text-lg">{timeWithBang} {timeWithBang === 1 ? 'heure' : 'heures'}/mois</span>
                     </p>
                     <p className="text-xs text-gray-500 mt-1">Soit un gain de temps de 95%</p>
                   </div>
