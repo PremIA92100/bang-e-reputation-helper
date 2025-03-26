@@ -4,13 +4,15 @@ import { Clock, MessageSquare, Users, ShieldCheck } from 'lucide-react';
 import { ChartContainer, ChartTooltip } from '@/components/ui/chart';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Cell } from 'recharts';
 import { Slider } from '@/components/ui/slider';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const TimeChart = () => {
   // État pour le temps consacré sans Bang (en heures par mois)
-  const [timeWithoutBang, setTimeWithoutBang] = useState<number>(5);
+  const [timeWithoutBang, setTimeWithoutBang] = useState<number>(10);
+  const isMobile = useIsMobile();
   
-  // Calcul du temps avec Bang (90% de réduction)
-  const timeWithBang = parseFloat((timeWithoutBang * 0.1).toFixed(1));
+  // Calcul du temps avec Bang (95% de réduction)
+  const timeWithBang = parseFloat((timeWithoutBang * 0.05).toFixed(1));
   
   // Données pour le graphique, mises à jour en fonction du curseur
   const data = [
@@ -40,7 +42,7 @@ const TimeChart = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Gain de temps</h3>
-                  <p className="text-sm text-bang-lightblue">Réduisez de 90% le temps consacré à la gestion des avis</p>
+                  <p className="text-sm text-bang-lightblue">Réduisez de 95% le temps consacré à la gestion des avis</p>
                 </div>
               </div>
               
@@ -82,9 +84,12 @@ const TimeChart = () => {
           </div>
           
           <div className="bg-white rounded-2xl shadow-md p-6">
-            <h3 className="text-xl font-semibold text-center mb-4">Temps consacré à la gestion des avis (heures/mois)</h3>
+            <h3 className="text-xl font-semibold text-center mb-6">
+              Temps consacré à la gestion des avis
+              <br />(heures/mois)
+            </h3>
             
-            <div className="h-[300px] mb-8">
+            <div className="h-[280px] mb-6">
               <ChartContainer
                 config={{
                   "Sans Bang": { color: "#94a3b8" },
@@ -93,10 +98,26 @@ const TimeChart = () => {
                 className="h-full"
               >
                 <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={data} layout="vertical" margin={{ left: 20, right: 20, top: 20, bottom: 20 }}>
+                  <BarChart 
+                    data={data} 
+                    layout="vertical" 
+                    margin={{ left: isMobile ? 60 : 80, right: 20, top: 20, bottom: 20 }}
+                    barGap={4}
+                    maxBarSize={40}
+                  >
                     <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
-                    <XAxis type="number" domain={[0, 15]} />
-                    <YAxis type="category" dataKey="name" width={100} />
+                    <XAxis 
+                      type="number" 
+                      domain={[0, 15]} 
+                      ticks={[0, 4, 8, 12, 15]} 
+                    />
+                    <YAxis 
+                      type="category" 
+                      dataKey="name" 
+                      width={80} 
+                      tickLine={false}
+                      axisLine={false}
+                    />
                     <ChartTooltip
                       content={({ active, payload }) => {
                         if (active && payload && payload.length) {
@@ -108,7 +129,7 @@ const TimeChart = () => {
                               </p>
                               {payload[0].payload.name === 'Avec Bang' && (
                                 <p className="text-sm text-green-600 font-medium">
-                                  -90% de temps consacré
+                                  -95% de temps consacré
                                 </p>
                               )}
                             </div>
@@ -128,13 +149,13 @@ const TimeChart = () => {
             </div>
             
             <div className="space-y-4">
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-700">Ajustez le temps consacré sans Bang:</span>
-                <span className="text-sm font-semibold text-bang-orange">{timeWithoutBang} heures</span>
+                <span className="text-xl font-semibold text-bang-orange">{timeWithoutBang} heures</span>
               </div>
               
               <Slider
-                defaultValue={[5]}
+                value={[timeWithoutBang]}
                 min={1}
                 max={15}
                 step={1}
@@ -142,21 +163,23 @@ const TimeChart = () => {
                 className="cursor-pointer"
               />
               
-              <div className="flex justify-between text-sm text-gray-500">
+              <div className="flex justify-between text-sm text-gray-500 mt-1">
                 <span>1h</span>
                 <span>15h</span>
               </div>
               
-              <div className="bg-green-50 rounded-lg p-3 border border-green-100 mt-4">
-                <div className="flex items-center gap-2">
+              <div className="bg-green-50 rounded-lg p-4 border border-green-100 mt-4">
+                <div className="flex items-center gap-3">
                   <div className="bg-green-100 p-2 rounded-full">
-                    <Clock className="h-4 w-4 text-green-600" />
+                    <Clock className="h-5 w-5 text-green-600" />
                   </div>
-                  <p className="text-sm text-bang-blue">
-                    <span className="font-semibold">Avec Bang:</span> seulement <span className="text-green-600 font-semibold">{timeWithBang} heures/mois</span>
-                  </p>
+                  <div>
+                    <p className="text-sm font-medium text-bang-blue">
+                      Avec Bang: seulement <span className="text-green-600 font-semibold text-lg">{timeWithBang} heures/mois</span>
+                    </p>
+                    <p className="text-xs text-gray-500 mt-1">Soit un gain de temps de 95%</p>
+                  </div>
                 </div>
-                <p className="text-xs text-gray-500 mt-1 ml-8">Soit un gain de temps de 90%</p>
               </div>
             </div>
           </div>
