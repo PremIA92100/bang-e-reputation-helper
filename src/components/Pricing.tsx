@@ -12,7 +12,7 @@ const pricingPlans = [
     features: [
       "Surveillance de vos avis Google",
       "Notifications par email",
-      "10 réponses personnalisées / mois",
+      "30 réponses personnalisées / mois",
       "Rapport mensuel basique",
       "Support par email"
     ],
@@ -20,7 +20,8 @@ const pricingPlans = [
       "Réponses optimisées pour le SEO",
       "Analyse sémantique des avis",
       "Intégration des avis sur votre site",
-      "Support prioritaire"
+      "Support prioritaire",
+      "Marketing multi-établissements"
     ],
     cta: "Commencer l'essai",
     popular: false
@@ -33,10 +34,11 @@ const pricingPlans = [
     features: [
       "Surveillance de vos avis Google",
       "Notifications en temps réel",
-      "30 réponses personnalisées / mois",
+      "100 réponses personnalisées / mois",
       "Réponses optimisées pour le SEO",
       "Rapport mensuel détaillé",
       "Analyse sémantique des avis",
+      "Marketing multi-établissements",
       "Support par email et téléphone"
     ],
     notIncluded: [
@@ -58,6 +60,7 @@ const pricingPlans = [
       "Réponses optimisées pour le SEO",
       "Rapport mensuel avancé",
       "Analyse sémantique des avis",
+      "Marketing multi-établissements",
       "Intégration des avis sur votre site",
       "Widget de collecte d'avis",
       "Support prioritaire 7j/7"
@@ -174,8 +177,10 @@ const Pricing = () => {
                 </div>
               </div>
               
-              <div className="px-6 py-4 bg-bang-lightgray text-xs text-bang-lightblue text-center border-t border-bang-gray">
-                Sans engagement • Essai gratuit de 14 jours
+              <div className="px-6 py-4 bg-bang-lightgray text-center">
+                <p className="text-sm font-medium text-bang-blue">
+                  <span className="text-[#ea384c]">SATISFAIT OU REMBOURSÉ</span>
+                </p>
               </div>
             </div>
           ))}
