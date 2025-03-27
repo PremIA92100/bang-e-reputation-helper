@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Utensils, Scissors, Building2, Car, Store, Heart, Hotel, ShoppingBag } from 'lucide-react';
+import { Utensils, Scissors, Building2, Car, Store, Heart, Hotel, ShoppingBag, Coffee, Stethoscope, Dumbbell, Shirt } from 'lucide-react';
 
 const businesses = [
   { icon: <Utensils className="h-6 w-6" />, name: "Restaurants" },
@@ -10,7 +10,11 @@ const businesses = [
   { icon: <Building2 className="h-6 w-6" />, name: "Cliniques" },
   { icon: <Store className="h-6 w-6" />, name: "Commerces" },
   { icon: <ShoppingBag className="h-6 w-6" />, name: "Boutiques" },
-  { icon: <Heart className="h-6 w-6" />, name: "Bien-être" }
+  { icon: <Heart className="h-6 w-6" />, name: "Bien-être" },
+  { icon: <Coffee className="h-6 w-6" />, name: "Cafés" },
+  { icon: <Stethoscope className="h-6 w-6" />, name: "Médecins" },
+  { icon: <Dumbbell className="h-6 w-6" />, name: "Salles de Sport" },
+  { icon: <Shirt className="h-6 w-6" />, name: "Prêt-à-porter" }
 ];
 
 const Hero = () => {
