@@ -110,16 +110,18 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <div className="absolute -bottom-6 right-12 bg-white shadow-lg p-4 rounded-xl">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 10L21 3M21 3H15M21 3V9M10 14L3 21M3 21H9M3 21L3 15" stroke="#22C55E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-bold text-bang-blue">+34%</div>
-                  <div className="text-xs text-bang-lightblue">de visibilité</div>
+            <div className="mt-8 flex justify-center">
+              <div className="bg-white shadow-lg p-4 rounded-xl">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 10L21 3M21 3H15M21 3V9M10 14L3 21M3 21H9M3 21L3 15" stroke="#22C55E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="font-bold text-bang-blue">+13% à +37%</div>
+                    <div className="text-xs text-bang-lightblue">de visibilité</div>
+                  </div>
                 </div>
               </div>
             </div>
