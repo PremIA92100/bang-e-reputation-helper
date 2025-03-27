@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Utensils, Scissors, Building2, Car, Store, Heart, Hotel, ShoppingBag } from 'lucide-react';
@@ -24,7 +23,7 @@ const Hero = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight opacity-0 animate-fade-in"
               style={{ animationDelay: '100ms' }}
             >
-              Dominez votre <span className="text-bang-orange">e-réputation</span> et augmentez votre visibilité sur Google à partir de <span className="text-bang-orange">19,99€ HT/mois</span>
+              Dominez votre <span className="text-bang-orange">e-réputation</span> et augmentez votre visibilité sur Google à partir de <span className="text-bang-orange">9,99€ HT/mois</span>
             </h1>
             
             <p 
