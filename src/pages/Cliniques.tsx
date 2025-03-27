@@ -1,185 +1,197 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cliniques = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <article className="prose prose-lg max-w-4xl mx-auto px-4 py-16">
-        <h1>L'impact des avis Google sur la croissance des établissements de santé</h1>
+    <div className="min-h-screen bg-gray-50">
+      {/* Navigation */}
+      <nav className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex">
+              <div className="flex-shrink-0 flex items-center">
+                <Link to="/" className="text-2xl font-bold text-blue-600">
+                  Bang Reputation
+                </Link>
+              </div>
+              <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                <Link to="/" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  Accueil
+                </Link>
+                <Link to="/cliniques" className="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  Cliniques
+                </Link>
+                <Link to="/restaurants" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  Restaurants
+                </Link>
+                <Link to="/hotels" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  Hôtels
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-        <p>
-          Dans un monde où la recherche d'informations médicales commence souvent en ligne, la réputation numérique des établissements de santé est devenue un atout stratégique incontournable. Les avis Google représentent aujourd'hui une vitrine digitale essentielle pour les cliniques, centres de radiologie, cabinets dentaires et autres structures médicales. Découvrons ensemble comment une gestion efficace de ces avis peut transformer radicalement votre visibilité et votre attractivité auprès des patients.
-        </p>
+      {/* Hero Section */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <span className="block">Gestion des avis pour</span>
+              <span className="block text-blue-600">établissements de santé</span>
+            </h1>
+            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+              Optimisez votre présence en ligne et développez votre activité grâce à une gestion professionnelle de vos avis Google.
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <h2>Pourquoi les avis Google sont essentiels pour les établissements de santé</h2>
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+          <div className="px-4 py-5 sm:px-6">
+            <article className="prose prose-lg max-w-none">
+              <h2>L'impact des avis Google sur la croissance des établissements de santé</h2>
 
-        <p>
-          La santé est un domaine où la confiance règne en maître. Avant de choisir un professionnel de santé, les patients effectuent des recherches approfondies, et les avis Google constituent souvent leur premier point de contact avec votre établissement.
-        </p>
+              <p>
+                La transformation numérique du secteur médical a profondément modifié la manière dont les patients choisissent leurs établissements de santé. Les avis en ligne, particulièrement sur Google, sont devenus un facteur déterminant dans le processus de sélection d'une clinique, d'un centre de radiologie ou d'un cabinet médical. Cette évolution majeure impose aux établissements de santé d'adopter une stratégie de gestion de leur réputation numérique.
+              </p>
 
-        <blockquote>
-          <p><strong>"95% des patients consultent les avis en ligne avant de choisir un professionnel de santé"</strong> - Étude Reputation Management, 2023</p>
-        </blockquote>
+              <h2>Le rôle crucial des avis Google dans le secteur médical</h2>
 
-        <h3>Un facteur déterminant dans le choix des patients</h3>
+              <p>
+                Le secteur médical se distingue par des exigences particulièrement élevées en matière de confiance et de qualité de service. Les études récentes démontrent que plus de 90% des patients consultent désormais les avis en ligne avant de choisir un établissement de santé. Cette tendance s'explique par plusieurs facteurs :
+              </p>
 
-        <p>Les statistiques parlent d'elles-mêmes :</p>
-        <ul>
-          <li>84% des patients font confiance aux avis en ligne autant qu'aux recommandations personnelles</li>
-          <li>Les établissements de santé avec une note moyenne supérieure à 4,5 étoiles attirent 2,5 fois plus de nouveaux patients</li>
-          <li>70% des patients sont prêts à se déplacer plus loin pour consulter un praticien mieux noté</li>
-        </ul>
+              <ul>
+                <li>La recherche d'informations médicales commence systématiquement en ligne</li>
+                <li>Les patients accordent une importance croissante aux expériences partagées</li>
+                <li>La transparence est devenue un critère de choix primordial</li>
+                <li>Les recommandations en ligne influencent directement la prise de décision</li>
+              </ul>
 
-        <h3>Un levier puissant pour le référencement local</h3>
+              <h2>Impact direct sur la visibilité des établissements de santé</h2>
 
-        <p>
-          Google privilégie les établissements bien notés dans ses résultats de recherche locaux. Une clinique dentaire, un centre d'imagerie médicale ou un cabinet de radiologie bénéficiant d'avis positifs et nombreux apparaîtra plus haut dans les résultats pour des requêtes comme "centre dentaire près de chez moi" ou "radiologie urgente Paris".
-        </p>
+              <p>
+                Le référencement local des établissements de santé est directement influencé par la qualité et la quantité des avis Google. Les algorithmes de recherche privilégient systématiquement les établissements bénéficiant d'une forte présence en ligne, caractérisée par :
+              </p>
 
-        <h2>Comment les avis Google transforment votre visibilité médicale</h2>
+              <ul>
+                <li>Une note moyenne élevée (supérieure à 4,5 étoiles)</li>
+                <li>Un volume significatif d'avis récents</li>
+                <li>Des réponses régulières aux commentaires</li>
+                <li>Des mots-clés pertinents dans les avis</li>
+              </ul>
 
-        <h3>Amélioration du référencement local (SEO médical)</h3>
+              <h2>Stratégies efficaces de gestion des avis pour les établissements de santé</h2>
 
-        <p>Les algorithmes de Google valorisent trois critères fondamentaux pour le référencement local des établissements de santé :</p>
-        <ul>
-          <li>La pertinence</li>
-          <li>La proximité</li>
-          <li>La notoriété</li>
-        </ul>
+              <h3>Collecte systématique des avis</h3>
+              
+              <p>
+                La mise en place d'un processus structuré de collecte d'avis est essentielle. Les établissements de santé performants intègrent cette démarche dans leur protocole post-consultation :
+              </p>
 
-        <p>
-          Les avis clients influencent directement la notoriété de votre centre médical. Plus vous collectez d'avis positifs, plus Google considère votre établissement comme une référence dans votre spécialité médicale.
-        </p>
+              <ul>
+                <li>Système automatisé d'envoi de demandes d'avis post-consultation</li>
+                <li>Formation du personnel à la sollicitation courtoise d'avis</li>
+                <li>Mise en place de points de contact numériques dans l'établissement</li>
+                <li>Intégration des demandes d'avis dans les documents de suivi</li>
+              </ul>
 
-        <h3>Renforcement de la confiance des patients</h3>
+              <h3>Optimisation du référencement local</h3>
 
-        <p>
-          Dans le secteur médical, la confiance est primordiale. Les futurs patients qui découvrent votre centre de radiologie ou votre clinique dentaire accordent une importance capitale aux témoignages des patients précédents :
-        </p>
+              <p>
+                Le référencement local des établissements de santé repose sur trois piliers fondamentaux que les avis Google influencent directement :
+              </p>
 
-        <blockquote>
-          <p>★★★★★ <em>"L'équipe du Centre d'Imagerie Médicale Saint-Michel a été d'un professionnalisme remarquable. Prise en charge rapide, explications claires de mon IRM et personnel attentionné. Je recommande vivement !"</em> - Marie D.</p>
-        </blockquote>
+              <ul>
+                <li>La pertinence : correspondance entre les services proposés et les recherches des patients</li>
+                <li>La proximité : importance de la géolocalisation dans les résultats de recherche</li>
+                <li>La notoriété : impact des avis sur la visibilité globale</li>
+              </ul>
 
-        <p>
-          Ce type d'avis authentique rassure immédiatement les nouveaux patients potentiels sur la qualité des soins et l'accueil de votre établissement.
-        </p>
+              <h3>Gestion professionnelle des réponses</h3>
 
-        <h2>Les meilleures pratiques pour gérer vos avis Google en milieu médical</h2>
+              <p>
+                La réponse aux avis constitue un élément crucial de la stratégie de réputation en ligne. Les établissements de santé doivent adopter une approche structurée :
+              </p>
 
-        <h3>Solliciter activement les avis de vos patients</h3>
+              <ul>
+                <li>Réponses personnalisées à chaque avis</li>
+                <li>Respect strict du secret médical dans les échanges</li>
+                <li>Délai de réponse optimal sous 24 heures</li>
+                <li>Proposition de solutions concrètes en cas d'insatisfaction</li>
+              </ul>
 
-        <p>
-          N'attendez pas que les avis arrivent spontanément. Après chaque consultation ou examen, invitez courtoisement vos patients satisfaits à partager leur expérience :
-        </p>
-        <ul>
-          <li>Envoi automatique d'un SMS post-consultation avec un lien direct</li>
-          <li>QR code à scanner dans votre salle d'attente</li>
-          <li>Mention sur vos ordonnances ou documents remis aux patients</li>
-        </ul>
+              <h2>Mesure et analyse de l'impact des avis</h2>
 
-        <h3>Répondre systématiquement à tous les avis</h3>
+              <p>
+                L'évaluation régulière de l'impact des avis sur l'activité de l'établissement permet d'optimiser la stratégie de réputation en ligne. Les indicateurs clés à surveiller incluent :
+              </p>
 
-        <p>Qu'ils soient positifs ou négatifs, chaque avis mérite une réponse personnalisée :</p>
+              <ul>
+                <li>Évolution du nombre de nouveaux patients</li>
+                <li>Taux de conversion des visiteurs de la fiche Google</li>
+                <li>Position dans les résultats de recherche locaux</li>
+                <li>Progression de la note moyenne globale</li>
+              </ul>
 
-        <p>Pour les avis positifs :</p>
-        <blockquote>
-          <p>"Merci beaucoup pour votre confiance, Madame Dupont. Notre équipe de radiologues est ravie d'avoir pu vous accompagner efficacement dans votre parcours de soins. Nous restons à votre disposition pour vos futurs examens d'imagerie médicale."</p>
-        </blockquote>
+              <h2>Aspects techniques essentiels</h2>
 
-        <p>Pour les avis négatifs :</p>
-        <blockquote>
-          <p>"Nous sommes sincèrement désolés de votre expérience, Monsieur Martin. La satisfaction de nos patients est notre priorité absolue. Notre responsable du centre dentaire vous contactera personnellement pour échanger sur votre situation et améliorer nos services. Vous pouvez nous joindre directement au 01.XX.XX.XX.XX."</p>
-        </blockquote>
+              <p>
+                La gestion technique de la présence en ligne nécessite une attention particulière aux éléments suivants :
+              </p>
 
-        <h3>Gérer professionnellement les avis négatifs</h3>
+              <ul>
+                <li>Configuration précise des informations de l'établissement</li>
+                <li>Mise à jour régulière des horaires et services</li>
+                <li>Optimisation des contenus multimédias</li>
+                <li>Catégorisation appropriée des spécialités médicales</li>
+              </ul>
 
-        <p>Les avis négatifs, bien que redoutés, représentent une opportunité d'amélioration :</p>
-        <ol>
-          <li>Répondez rapidement (idéalement sous 24h)</li>
-          <li>Restez courtois et professionnel</li>
-          <li>Proposez une solution concrète</li>
-          <li>Respectez strictement le secret médical dans vos réponses</li>
-          <li>Déplacez la conversation vers un canal privé</li>
-        </ol>
+              <h2>Bonnes pratiques et conformité</h2>
 
-        <h2>L'impact concret des avis sur l'activité d'un établissement de santé</h2>
+              <p>
+                Les établissements de santé doivent respecter des règles strictes dans leur gestion des avis en ligne :
+              </p>
 
-        <h3>Cas pratique : un centre de radiologie transformé par les avis</h3>
+              <ul>
+                <li>Respect absolu du secret médical dans les échanges publics</li>
+                <li>Conformité aux réglementations de protection des données</li>
+                <li>Transparence dans la collecte et le traitement des avis</li>
+                <li>Authenticité garantie des témoignages publiés</li>
+              </ul>
 
-        <p>Un centre d'imagerie médicale parisien a mis en place une stratégie de gestion des avis Google avec Bang Reputation. Les résultats après 6 mois sont éloquents :</p>
-        <ul>
-          <li>Augmentation de 37% du taux de conversion des visiteurs de leur fiche Google</li>
-          <li>42% de nouveaux patients déclarant avoir choisi le centre suite à la lecture des avis</li>
-          <li>Progression de 5 places dans les résultats de recherche pour "IRM urgente Paris"</li>
-          <li>Amélioration de la note moyenne de 3,6 à 4,7 étoiles</li>
-        </ul>
+              <h2>Conclusion et perspectives</h2>
 
-        <h2>Comment Bang Reputation révolutionne la gestion des avis pour les professionnels de santé</h2>
+              <p>
+                La gestion professionnelle des avis Google représente aujourd'hui un investissement stratégique pour tout établissement de santé. Elle permet non seulement d'améliorer la visibilité en ligne, mais aussi de renforcer la confiance des patients et d'optimiser la qualité des services proposés.
+              </p>
 
-        <p>
-          Les établissements médicaux font face à des défis spécifiques en matière de réputation en ligne. La solution Bang Reputation, développée par l'agence Prem'IA, offre une approche sur mesure pour les cliniques, centres de radiologie, et cabinets dentaires.
-        </p>
+              <p>
+                Dans un secteur médical de plus en plus concurrentiel, la réputation numérique devient un facteur différenciant majeur. Les établissements qui adoptent une approche structurée de la gestion des avis constatent une amélioration significative de leur attractivité et de leur développement.
+              </p>
 
-        <h3>Une plateforme dédiée au secteur médical</h3>
+              <p>
+                L'avenir de la santé se conjugue désormais avec une présence numérique maîtrisée, où la gestion des avis joue un rôle central dans la relation avec les patients et dans le développement de l'activité.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
 
-        <p>Bang Reputation intègre les particularités du domaine médical :</p>
-        <ul>
-          <li>Respect du secret médical dans la gestion des réponses</li>
-          <li>Conformité RGPD pour la collecte des avis</li>
-          <li>Terminologie adaptée aux spécialités médicales</li>
-          <li>Intégration avec les logiciels de prise de rendez-vous médicaux</li>
-        </ul>
-
-        <h3>Un tableau de bord analytique pour mesurer votre e-réputation médicale</h3>
-
-        <p>La plateforme vous permet de suivre en temps réel :</p>
-        <ul>
-          <li>L'évolution de votre note moyenne par établissement et spécialité</li>
-          <li>La comparaison avec les centres concurrents de votre zone</li>
-          <li>Les mots-clés récurrents dans vos avis (positifs et négatifs)</li>
-          <li>L'impact de votre réputation sur votre référencement local</li>
-        </ul>
-
-        <h2>Les erreurs à éviter dans la gestion des avis pour un établissement médical</h2>
-
-        <h3>Ne jamais créer de faux avis</h3>
-
-        <p>
-          Cette pratique est non seulement contraire à l'éthique médicale, mais également sanctionnée par Google et les autorités de santé.
-        </p>
-
-        <h3>Éviter les réponses standardisées</h3>
-
-        <p>
-          Chaque patient mérite une réponse personnalisée qui démontre l'attention que vous portez à son expérience particulière.
-        </p>
-
-        <h3>Ne pas négliger les aspects techniques</h3>
-
-        <p>Assurez-vous que votre fiche Google My Business est correctement configurée :</p>
-        <ul>
-          <li>Coordonnées exactes du centre médical</li>
-          <li>Horaires précis d'ouverture</li>
-          <li>Photos professionnelles de votre établissement</li>
-          <li>Catégories pertinentes (centre de radiologie, clinique dentaire, etc.)</li>
-        </ul>
-
-        <h2>Conclusion : transformer vos avis en atout stratégique pour votre établissement de santé</h2>
-
-        <p>
-          À l'ère du patient connecté, les avis Google sont devenus un élément fondamental de votre stratégie marketing médical. Bien gérés, ils constituent un puissant levier de croissance pour votre centre dentaire, votre clinique ou votre cabinet de radiologie.
-        </p>
-
-        <p>
-          La solution Bang Reputation de Prem'IA vous accompagne dans cette démarche essentielle, alliant expertise du secteur médical et maîtrise des algorithmes de Google pour faire rayonner votre réputation digitale et attirer de nouveaux patients.
-        </p>
-
-        <p>
-          Ne laissez plus votre e-réputation médicale au hasard. Investissez dans une gestion professionnelle de vos avis Google et transformez-les en véritable outil de développement pour votre établissement de santé.
-        </p>
-
-        <p><em>Pour en savoir plus sur la gestion de votre réputation en ligne et découvrir comment Bang Reputation peut transformer la visibilité de votre centre médical, contactez dès aujourd'hui les experts de Prem'IA.</em></p>
-      </article>
+      {/* Footer */}
+      <footer className="bg-white">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-base text-gray-500">
+              © {new Date().getFullYear()} Bang Reputation. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
