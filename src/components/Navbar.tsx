@@ -7,7 +7,7 @@ const navLinks = [
   { name: 'Tarifs', href: '#pricing' },
   { name: 'Témoignages', href: '#testimonials' },
   { name: 'FAQ', href: '#faq' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Contact', href: 'https://forms.fillout.com/t/2K54G3egY2us' },
 ];
 
 const Navbar = () => {
