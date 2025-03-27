@@ -144,7 +144,7 @@ const Cliniques = () => {
           <div className="lg:text-center">
             <h2 className="text-base text-[#FF5733] font-semibold tracking-wide uppercase">Fonctionnalités</h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Une solution complète pour votre clinique
+              Une solution complète pour votre centre médical
             </p>
           </div>
 
@@ -152,12 +152,12 @@ const Cliniques = () => {
             <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
               {[
                 {
-                  title: "Collecte automatisée",
-                  description: "Système intelligent de collecte d'avis post-consultation"
+                  title: "Réponse automatisée",
+                  description: "Système intelligent de réponse d'avis post-consultation"
                 },
                 {
-                  title: "Réponse rapide",
-                  description: "Interface intuitive pour gérer tous vos avis efficacement"
+                  title: "Réponse SEO",
+                  description: "Réponse SEO optimale pour améliorer votre positionnement"
                 },
                 {
                   title: "Analyse détaillée",
