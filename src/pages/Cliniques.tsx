@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Star, TrendingUp, ShieldCheck, MessageSquare } from 'lucide-react';
+import { Star, TrendingUp, Building2, ShieldCheck, MessageSquare, Clock, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const Cliniques = () => {
   return (
@@ -11,49 +11,34 @@ const Cliniques = () => {
             L'impact des avis Google sur la croissance des <span className="text-bang-orange">établissements de santé</span>
           </h1>
           <p className="text-xl text-bang-lightblue text-center max-w-3xl mx-auto">
-            Dans un monde où la recherche d'informations médicales commence souvent en ligne, la réputation numérique des établissements de santé est devenue un atout stratégique incontournable.
+            Dans un monde où la recherche d'informations médicales commence souvent en ligne, la réputation numérique des établissements de santé est devenue un atout stratégique incontournable. Les avis Google représentent aujourd'hui une vitrine digitale essentielle pour les cliniques, centres de radiologie, cabinets dentaires et autres structures médicales.
           </p>
         </div>
       </section>
 
-      {/* Statistiques clés */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-blue-50 p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-bang-orange mb-2">95%</div>
-              <p className="text-bang-blue">des patients consultent les avis en ligne avant de choisir un professionnel de santé</p>
-            </div>
-            <div className="bg-blue-50 p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-bang-orange mb-2">2.5×</div>
-              <p className="text-bang-blue">plus de nouveaux patients pour les établissements notés +4.5 étoiles</p>
-            </div>
-            <div className="bg-blue-50 p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-bang-orange mb-2">70%</div>
-              <p className="text-bang-blue">des patients prêts à se déplacer plus loin pour un praticien mieux noté</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contenu principal */}
-      <section className="py-16">
+      {/* Article Content */}
+      <article className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-bang-blue mb-6">
+            {/* Citation mise en avant */}
+            <blockquote className="bg-blue-50 p-6 rounded-xl border-l-4 border-bang-orange my-8">
+              <p className="text-xl font-semibold text-bang-blue">
+                "95% des patients consultent les avis en ligne avant de choisir un professionnel de santé"
+              </p>
+              <footer className="text-bang-lightblue">
+                - Étude Reputation Management, 2023
+              </footer>
+            </blockquote>
+
+            <h2 className="text-3xl font-bold text-bang-blue mt-12 mb-6">
               Pourquoi les avis Google sont essentiels pour les établissements de santé
             </h2>
-            <p className="text-bang-lightblue mb-8">
-              La santé est un domaine où la confiance règne en maître. Avant de choisir un professionnel de santé, 
-              les patients effectuent des recherches approfondies, et les avis Google constituent souvent leur premier 
-              point de contact avec votre établissement.
-            </p>
 
             <div className="bg-gray-50 p-6 rounded-xl mb-8">
               <h3 className="text-2xl font-bold text-bang-blue mb-4">
                 Un facteur déterminant dans le choix des patients
               </h3>
-              <ul className="list-none space-y-4">
+              <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <Star className="text-bang-orange flex-shrink-0 mt-1" />
                   <span>84% des patients font confiance aux avis en ligne autant qu'aux recommandations personnelles</span>
@@ -69,27 +54,67 @@ const Cliniques = () => {
               </ul>
             </div>
 
-            <h2 className="text-3xl font-bold text-bang-blue mb-6">
-              Comment Bang Reputation révolutionne la gestion des avis
+            <h3 className="text-2xl font-bold text-bang-blue mt-8 mb-4">
+              Un levier puissant pour le référencement local
+            </h3>
+            <p className="text-bang-lightblue mb-8">
+              Google privilégie les établissements bien notés dans ses résultats de recherche locaux. Une clinique dentaire, un centre d'imagerie médicale ou un cabinet de radiologie bénéficiant d'avis positifs et nombreux apparaîtra plus haut dans les résultats pour des requêtes comme "centre dentaire près de chez moi" ou "radiologie urgente Paris".
+            </p>
+
+            {/* Témoignage Client */}
+            <div className="bg-white p-6 rounded-xl border border-gray-200 my-8">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="text-bang-orange">★★★★★</div>
+                <span className="font-semibold">Témoignage Client</span>
+              </div>
+              <p className="italic text-bang-lightblue">
+                "L'équipe du Centre d'Imagerie Médicale Saint-Michel a été d'un professionnalisme remarquable. Prise en charge rapide, explications claires de mon IRM et personnel attentionné. Je recommande vivement !"
+              </p>
+              <p className="text-right text-sm text-bang-lightblue mt-2">- Marie D.</p>
+            </div>
+
+            <h2 className="text-3xl font-bold text-bang-blue mt-12 mb-6">
+              Les meilleures pratiques pour gérer vos avis Google
             </h2>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <ShieldCheck className="text-bang-orange mb-4 h-8 w-8" />
-                <h4 className="text-xl font-bold text-bang-blue mb-2">Conformité et Sécurité</h4>
+                <Clock className="text-bang-orange mb-4 h-8 w-8" />
+                <h4 className="text-xl font-bold text-bang-blue mb-2">Réactivité</h4>
                 <ul className="space-y-2 text-bang-lightblue">
-                  <li>✓ Respect du secret médical</li>
-                  <li>✓ Conformité RGPD</li>
-                  <li>✓ Données sécurisées</li>
+                  <li>✓ Réponse sous 24h</li>
+                  <li>✓ Suivi personnalisé</li>
+                  <li>✓ Solutions concrètes</li>
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <MessageSquare className="text-bang-orange mb-4 h-8 w-8" />
-                <h4 className="text-xl font-bold text-bang-blue mb-2">Gestion Simplifiée</h4>
+                <CheckCircle2 className="text-bang-orange mb-4 h-8 w-8" />
+                <h4 className="text-xl font-bold text-bang-blue mb-2">Professionnalisme</h4>
                 <ul className="space-y-2 text-bang-lightblue">
-                  <li>✓ Réponses personnalisées</li>
-                  <li>✓ Suivi en temps réel</li>
-                  <li>✓ Analyses détaillées</li>
+                  <li>✓ Courtoisie</li>
+                  <li>✓ Secret médical</li>
+                  <li>✓ Gestion des conflits</li>
                 </ul>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold text-bang-blue mt-12 mb-6">
+              Résultats concrets avec Bang Reputation
+            </h2>
+
+            <div className="bg-gray-50 p-6 rounded-xl mb-8">
+              <h3 className="text-2xl font-bold text-bang-blue mb-4">
+                Cas pratique : Centre d'imagerie médicale
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg text-center">
+                  <div className="text-3xl font-bold text-bang-orange">+37%</div>
+                  <p className="text-sm text-bang-lightblue">Taux de conversion</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg text-center">
+                  <div className="text-3xl font-bold text-bang-orange">4.7★</div>
+                  <p className="text-sm text-bang-lightblue">Note moyenne</p>
+                </div>
               </div>
             </div>
 
@@ -111,7 +136,7 @@ const Cliniques = () => {
             </div>
           </div>
         </div>
-      </section>
+      </article>
     </div>
   );
 };
