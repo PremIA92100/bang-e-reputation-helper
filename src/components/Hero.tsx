@@ -119,8 +119,8 @@ const Hero = () => {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-bold text-bang-blue">+13% à +37%</div>
-                    <div className="text-xs text-bang-lightblue">de visibilité</div>
+                    <div className="font-bold text-bang-blue">Entre 13% et 37%</div>
+                    <div className="text-xs text-bang-lightblue">de visibilité en +</div>
                   </div>
                 </div>
               </div>
