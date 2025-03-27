@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -58,7 +57,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://trends.google.fr/"
+            href="https://forms.fillout.com/t/2K54G3egY2us"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 bg-bang-orange hover:bg-opacity-90 text-white rounded-full font-medium transition-all"
@@ -92,7 +91,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://trends.google.fr/"
+              href="https://forms.fillout.com/t/2K54G3egY2us"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 mt-4 bg-bang-orange hover:bg-opacity-90 text-white rounded-full font-medium transition-all"

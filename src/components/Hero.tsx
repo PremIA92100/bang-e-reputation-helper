@@ -55,7 +55,7 @@ const Hero = () => {
                 style={{ animationDelay: '500ms' }}
               >
                 <a 
-                  href="https://trends.google.fr/" 
+                  href="https://forms.fillout.com/t/2K54G3egY2us" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-3.5 bg-bang-orange hover:bg-opacity-90 text-white font-medium rounded-full transition-all text-center flex items-center justify-center"
