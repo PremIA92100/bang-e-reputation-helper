@@ -1,13 +1,14 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Utensils, Scissors, Building2, Car, Store, Heart, Hotel, ShoppingBag, Coffee, Stethoscope, Dumbbell, Shirt } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const businesses = [
   { icon: <Utensils className="h-6 w-6" />, name: "Restaurants" },
   { icon: <Scissors className="h-6 w-6" />, name: "Coiffeurs" },
   { icon: <Hotel className="h-6 w-6" />, name: "Hôtels" },
   { icon: <Car className="h-6 w-6" />, name: "Garages Auto" },
-  { icon: <Building2 className="h-6 w-6" />, name: "Cliniques" },
+  { icon: <Building2 className="h-6 w-6" />, name: "Cliniques", link: "/cliniques" },
   { icon: <Store className="h-6 w-6" />, name: "Commerces" },
   { icon: <ShoppingBag className="h-6 w-6" />, name: "Boutiques" },
   { icon: <Heart className="h-6 w-6" />, name: "Bien-être" },
@@ -100,15 +101,28 @@ const Hero = () => {
             >
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {businesses.map((business, index) => (
-                  <div 
-                    key={index}
-                    className="bg-white p-4 rounded-xl shadow-sm border border-bang-gray hover:border-bang-orange transition-all flex flex-col items-center text-center gap-2"
-                  >
-                    <div className="bg-bang-lightgray rounded-full p-3 text-bang-orange">
-                      {business.icon}
+                  business.link ? (
+                    <Link 
+                      key={index}
+                      to={business.link}
+                      className="bg-white p-4 rounded-xl shadow-sm border border-bang-gray hover:border-bang-orange transition-all flex flex-col items-center text-center gap-2 cursor-pointer"
+                    >
+                      <div className="bg-bang-lightgray rounded-full p-3 text-bang-orange">
+                        {business.icon}
+                      </div>
+                      <p className="font-medium text-bang-blue text-sm">{business.name}</p>
+                    </Link>
+                  ) : (
+                    <div 
+                      key={index}
+                      className="bg-white p-4 rounded-xl shadow-sm border border-bang-gray hover:border-bang-orange transition-all flex flex-col items-center text-center gap-2"
+                    >
+                      <div className="bg-bang-lightgray rounded-full p-3 text-bang-orange">
+                        {business.icon}
+                      </div>
+                      <p className="font-medium text-bang-blue text-sm">{business.name}</p>
                     </div>
-                    <p className="font-medium text-bang-blue text-sm">{business.name}</p>
-                  </div>
+                  )
                 ))}
               </div>
               <div className="mt-8 flex justify-center">
